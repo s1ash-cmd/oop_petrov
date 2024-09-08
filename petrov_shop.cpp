@@ -31,65 +31,46 @@ void shop::items_output(vector<item>& items) {
 }
 
 void shop::items_write(vector<item>& items) {
-  ofstream fout;
-  string filename;
-
-  if (items.empty()){
-    cout << "\nТовары отсутствуют" << endl;}
-
-  else{
-    cout << "\nВведите имя файла: ";
-
-    cin >> filename;
-    fout.open(filename, ofstream::trunc);
-
-    if(fout.is_open()){
-      fout << items.size() << endl;
-      for (auto i : items) {
-        fout << i << endl;
-      }
-      cout << "\nЗапись выполнена" << endl;
-
-    }
-    else{
-      cout << "\nФайл не может быть открыт" << endl;
-    }
-
-    fout.close();
+  if (items.empty()) {
+    cout << "\nСписок товаров пуст" << endl;
+    return;
   }
+
+  string filename;
+  cout << "Введите имя файла: ";
+  cin >> filename;
+
+  ofstream fout(filename);
+  if (!fout) {
+    cerr << "Невозможно отркыть файл" << endl;
+    return;
+  }
+
+  for (auto& i : items) {
+    fout << i;
+  }
+
+  cout << "\nТовары сохранены в файл" << endl;
 }
 
 void shop::items_read(vector<item>& items) {
-  ifstream fin;
   string filename;
-  string line;
-
-  int item_count;
-
-  cout << "\nВведите имя файла: ";
+  cout << "Введите имя файла для чтения: ";
   cin >> filename;
 
-  fin.open(filename, ifstream::in);
-  if (fin.is_open()){
-    if (fin.peek() == ifstream::traits_type::eof()) {
-      cout << "\nНеверное имя файла или файл пуст" << endl;
-    }
-    else{
-      fin >> item_count;
-
-      for (int i = 1; i <= item_count; i++) {
-        item it;
-        fin >> it;
-        items.push_back(it);
-      }
-      cout << "\nЗагрузка выполнена" << endl;
-    }
-
+  ifstream fin(filename);
+  if (!fin) {
+    cerr << "Невозможно открыть файл" << endl;
+    return;
   }
-  else{
-    cout << "\nФайл не может быть открыт" << endl;
+
+  items.clear();
+  item i;
+  while (fin >> i) {
+    items.push_back(i);
   }
-  fin.close();
+
+  cout << "\nТовары загружены" << endl;
 }
 
 void shop::items_clear(vector<item>& items) {

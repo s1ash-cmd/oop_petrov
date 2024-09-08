@@ -155,8 +155,4 @@ CMakeFiles/oop_petrov.dir/main.cpp.o: /home/s1ash/oop_petrov/main.cpp \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
  /home/s1ash/oop_petrov/petrov_header.h \
- /home/s1ash/oop_petrov/petrov_shop.h /usr/include/c++/13/fstream \
- /usr/include/c++/13/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc
+ /home/s1ash/oop_petrov/petrov_shop.h

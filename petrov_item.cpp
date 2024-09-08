@@ -16,7 +16,7 @@ istream& operator>>(istream& in, item& i) {
 
   cout << "Введите ширину товара (в сантиметрах): ";
   i.width = check_input(0.0, 2000.0);
-  
+
   cout << "Введите высоту товара (в сантиметрах): ";
   i.height = check_input(0.0, 2000.0);
 
@@ -45,12 +45,8 @@ ofstream& operator<<(ofstream& fout, item& i) {
 }
 
 ifstream& operator>>(ifstream& fin, item& i) {
-  fin.ignore();
   getline(fin, i.name);
-  fin >> i.weight;
-  fin >> i.width;
-  fin >> i.height;
-  fin >> i.price;
-  fin >> i.stock;
+  fin >> i.weight >> i.width >> i.height >> i.price >> i.stock;
+  fin.ignore(); 
   return fin;
 }
