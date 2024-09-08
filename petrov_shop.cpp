@@ -1,5 +1,4 @@
 #include "petrov_item.h"
-#include "petrov_header.h"
 #include "petrov_shop.h"
 
 #include <iostream>

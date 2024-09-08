@@ -4,7 +4,6 @@
 #include "petrov_shop.h"
 
 #include <vector>
-#include <fstream>
 
 using namespace std;
 
