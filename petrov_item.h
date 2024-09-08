@@ -7,7 +7,7 @@
 using namespace std;
 
 class item {
-public:
+protected:
     string name = "";
     double weight = 0.0;
     double width = 0.0;
@@ -15,13 +15,11 @@ public:
     int price = 0;
     bool stock = 0;
 
-    item();
+public:
+friend istream& operator>>(istream& in, item& i);
+friend ostream& operator<<(ostream& out, item& i);
+friend ofstream& operator<<(ofstream& fout, item& i);
+friend ifstream& operator>>(ifstream& fin, item& i);
 };
-
-void input_item(item &i);
-void display_items(const vector<item> &items);
-
-void file_write(const vector<item> &items);
-void file_read(vector<item> &items);
 
 #endif // PETROV_ITEM_H

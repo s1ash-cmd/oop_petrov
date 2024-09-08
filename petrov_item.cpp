@@ -7,68 +7,51 @@
 
 using namespace std;
 
-item::item(){}
+istream& operator>>(istream& in, item& i) {
+  cout << "\nВведите название товара: ";
+  in.ignore();
+  getline(cin, i.name);
 
-void input_item(item &i) {
-    cout << "\nВведите название товара: ";
-    cin.ignore();
-    getline(cin, i.name);
-    cout << "Введите вес товара (в килограммах): ";
-    i.weight = check_input(0.0, 1000.0);
-    cout << "Введите ширину товара (в сантиметрах): ";
-    i.width = check_input(0.0, 2000.0);
-    cout << "Введите высоту товара (в сантиметрах): ";
-    i.height = check_input(0.0, 2000.0);
-    cout << "Введите цену товара (в рублях): ";
-    i.price = check_input(0, 1000000);
-    cout << "Товар в наличии? (1 - да, 0 - нет): ";
-    i.stock = check_input(0, 1);
+  cout << "Введите вес товара (в килограммах): ";
+  i.weight = check_input(0.0, 1000.0);
+
+  cout << "Введите ширину товара (в сантиметрах): ";
+  i.width = check_input(0.0, 2000.0);
+  
+  cout << "Введите высоту товара (в сантиметрах): ";
+  i.height = check_input(0.0, 2000.0);
+
+  cout << "Введите цену товара (в рублях): ";
+  i.price = check_input(0, 1000000);
+
+  cout << "Товар в наличии? (1 - да, 0 - нет): ";
+  i.stock = check_input(0, 1);
+
+  return in;
 }
 
-void display_items(const vector<item> &items) {
-    for (const auto &i : items) {
-        cout << "\nНазвание: " << i.name << endl;
-        cout << "Вес: " << i.weight << endl;
-        cout << "Ширина: " << i.width << endl;
-        cout << "Высота: " << i.height << endl;
-        cout << "Цена: " << i.price << endl;
-        cout << "В наличии: " << (i.stock ? "Да" : "Нет") << endl;
-    }
+ostream& operator<<(ostream& out, item& i) {
+  out << "\nНазвание: " << i.name << endl;
+  out << "Вес: " << i.weight << " кг" << endl;
+  out << "Ширина: " << i.width << " см" << endl;
+  out << "Высота: " << i.height << " см" << endl;
+  out << "Цена: " << i.price << " руб" << endl;
+  out << "В наличии: " << (i.stock ? "Да" : "Нет") << endl;
+  return out;
 }
 
-void file_write(const vector<item> &items) {
-    ofstream fout;
-    string filename;
-
-    if (items.empty()){
-        cout << "\nТовары отсутствуют" << endl;
-    }
-    else{
-        cout << "Введите имя файла: ";
-        cin >> filename;
-        fout.open(filename);
-
-        if (!fout.is_open()) {
-            cout << "Не удалось открыть файл " << filename << endl;
-            return;
-        }
-
-        else{
-            fout << items.size() << endl;
-            for (const auto &i : items) {
-                fout << i.name << endl;
-                fout << i.weight << endl;
-                fout << i.width << endl;
-                fout << i.height << endl;
-                fout << i.price << endl;
-                fout << i.stock << endl;
-            }
-
-            fout.close();
-        }
-    }
+ofstream& operator<<(ofstream& fout, item& i) {
+  fout << i.name << endl << i.weight << endl << i.width << endl << i.height << endl << i.price << endl << i.stock << endl;
+  return fout;
 }
 
-void file_read(){
-
+ifstream& operator>>(ifstream& fin, item& i) {
+  fin.ignore();
+  getline(fin, i.name);
+  fin >> i.weight;
+  fin >> i.width;
+  fin >> i.height;
+  fin >> i.price;
+  fin >> i.stock;
+  return fin;
 }

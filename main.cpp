@@ -10,33 +10,39 @@ using namespace std;
 
 int main()
 {
-  vector<item> items;
+
   shop s;
+  vector<item> items;
 
   for(;;){
     s.display_menu();
-    int menu_item = check_input(0, 4);
+    int menu_item = check_input(0, 5);
 
     switch(menu_item){
       case 1:{
-        item new_item;
-        input_item(new_item);
-        items.push_back(new_item);
+        item i;
+        cin >> i;
+        items.push_back(i);
         break;
       }
 
       case 2:{
-        display_items(items);
+        s.items_output(items);
         break;
       }
 
       case 3:{
-        file_write(items);
+        s.items_write(items);
         break;
       }
 
       case 4:{
-         
+        s.items_read(items);
+        break;
+      }
+
+      case 5:{
+        s.items_clear(items);
         break;
       }
 
