@@ -19,65 +19,96 @@ void shop::display_menu() {
   cout << "Выберите пункт меню: ";
 }
 
-void shop::items_output(vector<item>& items) {
-  if (items.empty()){
+void shop::add_item() {
+  item* new_item = new item;
+  cin >> *new_item;
+  items.push_back(new_item);
+}
+
+void shop::items_output() {
+  if (items.empty()) {
     cout << "\nТовары отсутствуют" << endl;
-  }
-  else{
+  } else {
     for (auto i : items) {
-      cout << i << endl;
+      cout << *i << endl;
     }
   }
 }
 
-void shop::items_write(vector<item>& items) {
+void shop::items_write() {
   if (items.empty()) {
-    cout << "\nСписок товаров пуст" << endl;
+    cout << "\nТовары отсутствуют" << endl;
     return;
   }
 
   string filename;
   cout << "Введите имя файла: ";
-  cin >> filename;
+  cin.ignore();
+  getline(cin, filename);
 
   ofstream fout(filename);
   if (!fout) {
-    cerr << "Невозможно отркыть файл" << endl;
-    return;
-  }
-
-  for (auto& i : items) {
-    fout << i;
-  }
-
-  cout << "\nТовары сохранены в файл" << endl;
-}
-
-void shop::items_read(vector<item>& items) {
-  string filename;
-  cout << "Введите имя файла для чтения: ";
-  cin >> filename;
-
-  ifstream fin(filename);
-  if (!fin) {
     cerr << "Невозможно открыть файл" << endl;
     return;
   }
 
-  items.clear();
-  item i;
-  while (fin >> i) {
-    items.push_back(i);
+  for (auto i : items) {
+    fout << *i;
   }
 
-  cout << "\nТовары загружены" << endl;
+  cout << "\nТовары сохранены в файл" << endl;
+
+  fout.close();
 }
 
-void shop::items_clear(vector<item>& items) {
-  if (items.empty()){
-    cout << "\nТовары отсутствуют" << endl;
+void shop::items_read() {
+  string filename;
+  cout << "Введите имя файла для чтения: ";
+  cin.ignore();
+  getline(cin, filename);
+
+  ifstream fin(filename);
+  if (!fin) {
+    cout << "Невозможно открыть файл" << endl;
+    return;
   }
-  else{
+
+  items_clear();
+
+  item* i = nullptr;
+  bool read_error = false;
+
+  while (fin) {
+    i = new item;
+
+    if (fin >> *i) {
+      items.push_back(i); 
+    } else {
+      delete i;
+      if (fin.eof()) {
+        break;
+      }
+      cout << "Ошибка чтения данных" << endl;
+      read_error = true;
+      items.clear();
+      break;
+    }
+  }
+
+  if (!read_error) {
+    cout << "\nТовары загружены" << endl;
+  }
+
+  fin.close();
+}
+
+void shop::items_clear() {
+  if (items.empty()) {
+    cout << "\nТовары отсутствуют" << endl;
+  } else {
+    for (auto i : items) {
+      delete i;
+    }
     items.clear();
     cout << "\nСписок очищен" << endl;
   }

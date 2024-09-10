@@ -1,49 +1,37 @@
-#include <iostream>
-#include "petrov_item.h"
-#include "petrov_header.h"
 #include "petrov_shop.h"
-
-#include <vector>
+#include "petrov_header.h"
 
 using namespace std;
 
 int main()
 {
   shop s;
-  vector<item> items;
 
   for(;;){
     s.display_menu();
     int menu_item = check_input(0, 5);
 
-    switch(menu_item){
-      case 1:{
-        item i;
-        cin >> i;
-        items.push_back(i);
+    switch(menu_item) {
+      case 1: {
+        s.add_item();
         break;
       }
-
-      case 2:{
-        s.items_output(items);
+      case 2: {
+        s.items_output();
         break;
       }
-
-      case 3:{
-        s.items_write(items);
+      case 3: {
+        s.items_write();
         break;
       }
-
-      case 4:{
-        s.items_read(items);
+      case 4: {
+        s.items_read();
         break;
       }
-
-      case 5:{
-        s.items_clear(items);
+      case 5: {
+        s.items_clear();
         break;
       }
-
       case 0:
         exit(0);
     }
