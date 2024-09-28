@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/oop_petrov.dir/petrov_item.cpp.o.d"
   "CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o"
   "CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o.d"
+  "CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o"
+  "CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o.d"
   "oop_petrov"
   "oop_petrov.pdb"
 )

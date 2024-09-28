@@ -1,52 +1,47 @@
 #include "petrov_item.h"
 #include "petrov_header.h"
-
-#include <iostream>
 #include <fstream>
 
 using namespace std;
 
-istream& operator>>(istream& in, item& i) {
-    cout << "\nВведите название товара: ";
-    in.ignore();
-    getline(cin, i.name);
+void item::input(istream &in) {
+  cout << "\nВведите название товара: ";
+  in.ignore();
+  getline(in, name);
 
-    cout << "Введите вес товара (в килограммах): ";
-    i.weight = check_input(0.0, 1000.0);
+  cout << "Введите вес товара (в килограммах): ";
+  weight = check_input(0.0, 1000.0);
 
-    cout << "Введите ширину товара (в сантиметрах): ";
-    i.width = check_input(0.0, 2000.0);
+  cout << "Введите ширину товара (в сантиметрах): ";
+  width = check_input(0.0, 2000.0);
 
-    cout << "Введите высоту товара (в сантиметрах): ";
-    i.height = check_input(0.0, 2000.0);
+  cout << "Введите высоту товара (в сантиметрах): ";
+  height = check_input(0.0, 2000.0);
 
-    cout << "Введите цену товара (в рублях): ";
-    i.price = check_input(0, 1000000);
+  cout << "Введите цену товара (в рублях): ";
+  price = check_input(0, 1000000000);
 
-    cout << "Товар в наличии? (1 - да, 0 - нет): ";
-    i.stock = check_input(0, 1);
-
-    return in;
+  cout << "Товар в наличии? (1 - да, 0 - нет): ";
+  stock = check_input(0, 1);
 }
 
-ostream& operator<<(ostream& out, item& i) {
-    out << "\nНазвание: " << i.name << endl;
-    out << "Вес: " << i.weight << " кг" << endl;
-    out << "Ширина: " << i.width << " см" << endl;
-    out << "Высота: " << i.height << " см" << endl;
-    out << "Цена: " << i.price << " руб" << endl;
-    out << "В наличии: " << (i.stock ? "Да" : "Нет") << endl;
-    return out;
+void item::output(ostream &out) const {
+  out << "\nНазвание: " << name << endl;
+  out << "Вес: " << weight << " кг" << endl;
+  out << "Ширина: " << width << " см" << endl;
+  out << "Высота: " << height << " см" << endl;
+  out << "Цена: " << price << " руб" << endl;
+  out << "В наличии: " << (stock ? "Да" : "Нет") << endl;
 }
 
-ofstream& operator<<(ofstream& fout, item& i) {
-    fout << i.name << endl << i.weight << endl << i.width << endl << i.height << endl << i.price << endl << i.stock << endl;
-    return fout;
+ofstream &operator<<(ofstream &fout, const item &i) {
+  boost::archive::text_oarchive oa(fout);
+  oa << i;
+  return fout;
 }
 
-ifstream& operator>>(ifstream& fin, item& i) {
-    getline(fin, i.name);
-    fin >> i.weight >> i.width >> i.height >> i.price >> i.stock;
-    fin.ignore();
-    return fin;
+ifstream &operator>>(ifstream &fin, item &i) {
+  boost::archive::text_iarchive ia(fin);
+  ia >> i;
+  return fin;
 }

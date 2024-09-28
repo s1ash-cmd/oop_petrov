@@ -8,9 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/s1ash/oop_petrov/main.cpp" "CMakeFiles/oop_petrov.dir/main.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/main.cpp.o.d"
-  "/home/s1ash/oop_petrov/petrov_item.cpp" "CMakeFiles/oop_petrov.dir/petrov_item.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/petrov_item.cpp.o.d"
-  "/home/s1ash/oop_petrov/petrov_shop.cpp" "CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o.d"
+  "/home/s1ash2k/oop_petrov/main.cpp" "CMakeFiles/oop_petrov.dir/main.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/main.cpp.o.d"
+  "/home/s1ash2k/oop_petrov/petrov_item.cpp" "CMakeFiles/oop_petrov.dir/petrov_item.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/petrov_item.cpp.o.d"
+  "/home/s1ash2k/oop_petrov/petrov_shop.cpp" "CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o.d"
+  "/home/s1ash2k/oop_petrov/petrov_used_item.cpp" "CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o" "gcc" "CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

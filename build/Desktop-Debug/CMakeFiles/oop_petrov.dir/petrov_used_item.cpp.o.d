@@ -1,6 +1,6 @@
-CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o: \
-  /home/s1ash2k/oop_petrov/petrov_shop.cpp \
-  /home/s1ash2k/oop_petrov/petrov_shop.h \
+CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o: \
+  /home/s1ash2k/oop_petrov/petrov_used_item.cpp \
+  /home/s1ash2k/oop_petrov/petrov_used_item.h \
   /home/s1ash2k/oop_petrov/petrov_header.h \
   /usr/include/boost/archive/text_iarchive.hpp \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/istream \
@@ -663,7 +663,6 @@ CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o: \
   /usr/include/boost/serialization/collection_traits.hpp \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/iostream \
   /home/s1ash2k/oop_petrov/petrov_item.h \
-  /home/s1ash2k/oop_petrov/petrov_used_item.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/fstream \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \

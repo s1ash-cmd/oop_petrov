@@ -2,6 +2,46 @@
 	"entries" : 
 	[
 		{
+			"name" : "Boost_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Boost."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/cmake/Boost-1.86.0"
+		},
+		{
+			"name" : "Boost_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/include"
+		},
+		{
+			"name" : "Boost_SERIALIZATION_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "STRING",
+			"value" : "/usr/lib/libboost_serialization.so.1.86.0"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -15,7 +55,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/addr2line"
+			"value" : "/usr/sbin/addr2line"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +71,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ar"
+			"value" : "/usr/sbin/ar"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -55,7 +95,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/s1ash/oop_petrov/build/Desktop-Debug"
+			"value" : "/home/s1ash2k/oop_petrov/build/Desktop-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "28"
+			"value" : "30"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "4"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -171,7 +211,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/usr/bin/g++"
+			"value" : "/usr/lib/ccache/bin/clang++"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -183,11 +223,27 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "LLVM archiver"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-13"
+			"value" : "CMAKE_CXX_COMPILER_AR-NOTFOUND"
+		},
+		{
+			"name" : "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "`clang-scan-deps` dependency scanner"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/clang-scan-deps"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -199,11 +255,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "Generate index for LLVM archive"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-13"
+			"value" : "CMAKE_CXX_COMPILER_RANLIB-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -236,6 +292,18 @@
 			],
 			"type" : "STRING",
 			"value" : "-g"
+		},
+		{
+			"name" : "CMAKE_CXX_FLAGS_INIT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
@@ -307,7 +375,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/clang"
+			"value" : "/usr/lib/ccache/bin/clang"
 		},
 		{
 			"name" : "CMAKE_C_OUTPUT_EXTENSION",
@@ -336,6 +404,18 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "CMAKE_DLLTOOL-NOTFOUND"
+		},
+		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/bin/ccmake"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -455,7 +535,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/s1ash/oop_petrov/build/Desktop-Debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/s1ash2k/oop_petrov/build/Desktop-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -515,7 +595,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/s1ash/oop_petrov"
+			"value" : "/home/s1ash2k/oop_petrov"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -779,7 +859,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_INSTALL_SYSCONFDIR",
@@ -811,7 +891,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ld"
+			"value" : "/usr/sbin/ld"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -827,7 +907,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gmake"
+			"value" : "/usr/bin/make"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -923,7 +1003,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/nm"
+			"value" : "/usr/sbin/nm"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -951,7 +1031,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objcopy"
+			"value" : "/usr/sbin/objcopy"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -967,7 +1047,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objdump"
+			"value" : "/usr/sbin/objdump"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -991,7 +1071,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : ""
+			"value" : "/usr"
 		},
 		{
 			"name" : "CMAKE_PROJECT_DESCRIPTION",
@@ -1027,7 +1107,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/s1ash/oop_petrov/build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake"
+			"value" : "/home/s1ash2k/oop_petrov/build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",
@@ -1055,7 +1135,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ranlib"
+			"value" : "/usr/sbin/ranlib"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -1071,7 +1151,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/readelf"
+			"value" : "/usr/sbin/readelf"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1083,7 +1163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.28"
+			"value" : "/usr/share/cmake"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1291,7 +1371,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/strip"
+			"value" : "/usr/sbin/strip"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -1338,6 +1418,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Boost",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding Boost"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/usr/lib/cmake/Boost-1.86.0/BoostConfig.cmake][cfound components: serialization ][v1.86.0()]"
+		},
+		{
 			"name" : "QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP",
 			"properties" : 
 			[
@@ -1359,7 +1451,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : ""
+			"value" : "/usr/sbin/qmake"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
@@ -1386,6 +1478,38 @@
 			"value" : "/usr/local"
 		},
 		{
+			"name" : "boost_headers_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for boost_headers."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/cmake/boost_headers-1.86.0"
+		},
+		{
+			"name" : "boost_serialization_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for boost_serialization."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/cmake/boost_serialization-1.86.0"
+		},
+		{
 			"name" : "oop_petrov_BINARY_DIR",
 			"properties" : 
 			[
@@ -1395,7 +1519,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/s1ash/oop_petrov/build/Desktop-Debug"
+			"value" : "/home/s1ash2k/oop_petrov/build/Desktop-Debug"
 		},
 		{
 			"name" : "oop_petrov_IS_TOP_LEVEL",
@@ -1419,7 +1543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/s1ash/oop_petrov"
+			"value" : "/home/s1ash2k/oop_petrov"
 		}
 	],
 	"kind" : "cache",

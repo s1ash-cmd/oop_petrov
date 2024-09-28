@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-8b2df4cd427c7ab23523.json",
+					"jsonFile" : "directory-.-Debug-e68938fc8658505a2eaf.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "oop_petrov::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-oop_petrov-Debug-e4ee037f2a949f33cb2c.json",
+					"jsonFile" : "target-oop_petrov-Debug-a17cd4f12ae434c5c2b5.json",
 					"name" : "oop_petrov",
 					"projectIndex" : 0
 				}
@@ -50,12 +50,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/s1ash/oop_petrov/build/Desktop-Debug",
-		"source" : "/home/s1ash/oop_petrov"
+		"build" : "/home/s1ash2k/oop_petrov/build/Desktop-Debug",
+		"source" : "/home/s1ash2k/oop_petrov"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

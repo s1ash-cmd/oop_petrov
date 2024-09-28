@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/oop_petrov.dir/main.cpp.o CMakeFiles/oop_petrov.dir/petrov_item.cpp.o CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o -o oop_petrov 
+/usr/lib/ccache/bin/clang++ -g CMakeFiles/oop_petrov.dir/main.cpp.o CMakeFiles/oop_petrov.dir/petrov_item.cpp.o CMakeFiles/oop_petrov.dir/petrov_shop.cpp.o CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o -o oop_petrov  /usr/lib/libboost_serialization.so.1.86.0
