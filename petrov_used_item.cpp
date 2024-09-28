@@ -10,8 +10,8 @@ void used_item::input(istream &in) {
   cout << "Введите возраст товара (в годах): ";
   age = check_input(0, 10000);
 
-  cout << "Введите состояние товара (0 - 10): ";
-  condition = check_input(0, 10);
+  cout << "Введите состояние товара (0.0 - 10.0): ";
+  condition = check_input(0.0, 10.0);
 
   cout << "Введите описание товара: ";
   in.ignore();

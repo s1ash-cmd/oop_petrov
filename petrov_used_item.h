@@ -11,7 +11,7 @@ using namespace std;
 class used_item : public item {
 protected:
   int age = 0;
-  int condition = 0;
+  double condition = 0.0;
   string description = "";
 
 public:
