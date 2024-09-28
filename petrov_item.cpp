@@ -10,13 +10,13 @@ void item::input(istream &in) {
   getline(in, name);
 
   cout << "Введите вес товара (в килограммах): ";
-  weight = check_input(0.0, 1000.0);
+  weight = check_input(0.0, 10000.0);
 
   cout << "Введите ширину товара (в сантиметрах): ";
-  width = check_input(0.0, 2000.0);
+  width = check_input(0.0, 5000.0);
 
   cout << "Введите высоту товара (в сантиметрах): ";
-  height = check_input(0.0, 2000.0);
+  height = check_input(0.0, 5000.0);
 
   cout << "Введите цену товара (в рублях): ";
   price = check_input(0, 1000000000);

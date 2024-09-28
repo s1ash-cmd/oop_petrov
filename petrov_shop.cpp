@@ -80,8 +80,14 @@ void shop::items_read() {
     return;
   }
 
-  boost::archive::text_iarchive ia(fin);
-  ia >> items;
+  try {
+    boost::archive::text_iarchive ia(fin);
+    ia >> items;
+  } catch (const exception &e) {
+    cerr << "Ошибка чтения из файла: " << e.what() << endl;
+    fin.close();
+    return;
+  }
 
   fin.close();
   cout << "Товары успешно загружены из файла." << endl;
