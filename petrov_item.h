@@ -32,9 +32,6 @@ public:
 
   virtual void input(istream &in);
   virtual void output(ostream &out) const;
-
-  friend ofstream &operator<<(ofstream &fout, const item &i);
-  friend ifstream &operator>>(ifstream &fin, item &i);
 };
 
 #endif // PETROV_ITEM_H

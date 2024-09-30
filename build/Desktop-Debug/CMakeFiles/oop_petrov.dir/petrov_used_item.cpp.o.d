@@ -662,8 +662,4 @@ CMakeFiles/oop_petrov.dir/petrov_used_item.cpp.o: \
   /usr/include/boost/core/enable_if.hpp \
   /usr/include/boost/serialization/collection_traits.hpp \
   /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/iostream \
-  /home/s1ash2k/oop_petrov/petrov_item.h \
-  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/fstream \
-  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
-  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
-  /usr/sbin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/fstream.tcc
+  /home/s1ash2k/oop_petrov/petrov_item.h

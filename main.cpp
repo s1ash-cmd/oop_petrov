@@ -1,9 +1,6 @@
 #include "petrov_header.h"
 #include "petrov_shop.h"
 
-BOOST_CLASS_EXPORT_GUID(item, "item")
-BOOST_CLASS_EXPORT_GUID(used_item, "used_item")
-
 using namespace std;
 
 int main() {

@@ -7,6 +7,9 @@
 #include <memory>
 #include <vector>
 
+BOOST_CLASS_EXPORT_GUID(item, "item")
+BOOST_CLASS_EXPORT_GUID(used_item, "used_item")
+
 using namespace std;
 
 void shop::display_menu() {

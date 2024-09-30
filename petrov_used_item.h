@@ -25,9 +25,6 @@ public:
 
   void input(istream &in) override;
   void output(ostream &out) const override;
-
-  friend ofstream &operator<<(ofstream &fout, const used_item &ui);
-  friend ifstream &operator>>(ifstream &fin, used_item &ui);
 };
 
 #endif // PETROV_USED_ITEM_H

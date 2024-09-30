@@ -1,6 +1,5 @@
 #include "petrov_item.h"
 #include "petrov_header.h"
-#include <fstream>
 
 using namespace std;
 
@@ -32,16 +31,4 @@ void item::output(ostream &out) const {
   out << "Высота: " << height << " см" << endl;
   out << "Цена: " << price << " руб" << endl;
   out << "В наличии: " << (stock ? "Да" : "Нет") << endl;
-}
-
-ofstream &operator<<(ofstream &fout, const item &i) {
-  boost::archive::text_oarchive oa(fout);
-  oa << i;
-  return fout;
-}
-
-ifstream &operator>>(ifstream &fin, item &i) {
-  boost::archive::text_iarchive ia(fin);
-  ia >> i;
-  return fin;
 }
